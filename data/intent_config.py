@@ -5,14 +5,32 @@ available_courses = [
     "Matemática",
 ]
 
-courses_links = {
-    "administracao": [
-        {
+utils_links = {
+    "administracao": {
             "main": "https://www.macae.rj.gov.br/femass/conteudo/titulo/administracao",
             "flowchart": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1691543647.pdf",
-            "summary": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1637813629.pdf",
+            "summary": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1637813629.pdf"
+        },
+    "engenharia-producao": {
+            "main": "https://www.macae.rj.gov.br/femass/conteudo/titulo/engenharia-de-producao",
+            "flowchart": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1637783091.pdf",
+            "summary": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1637859038.pdf"
+        },
+    "sistemas-informacao": {
+            "main": "https://www.macae.rj.gov.br/femass/conteudo/titulo/sistemas-de-informacao",
+            "flowchart": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1600942973.pdf",
+            "summary": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1631371724.pdf"
+        },
+    "matematica": {
+            "main": "https://www.macae.rj.gov.br/femass/conteudo/titulo/matematica",
+            "flowchart": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1595451069.pdf",
+            "summary": "https://www.macae.rj.gov.br/midia/conteudo/arquivos/1631373494.pdf"
+        },
+    "metodos_ingresso": {
+            "vestibular": "https://www.macae.rj.gov.br/femass/conteudo/titulo/vestibular",
+            "transferencia_externa": "https://www.macae.rj.gov.br/femass/conteudo/titulo/transferencia-externa",
+            "reingresso": "https://www.macae.rj.gov.br/femass/conteudo/titulo/reingresso"
         }
-    ]
 }
 
 intents = {
@@ -79,11 +97,16 @@ intents = {
             "intention": "cursos_disponiveis",
             "patterns": [
                 "Quais são os cursos disponíveis na FeMASS?",
-                "Me fale sobre os cursos da FeMASS.",
+                "Quais cursos estão disponíveis?",
+                "Me fale sobre os cursos da FeMASS",
+                "Me fale sobre os cursos",
                 "Que cursos a FeMASS oferece?",
                 "Quais cursos têm na FeMASS?",
+                "Quais cursos têm?",
                 "Pode me dizer os cursos disponíveis na FeMASS?",
+                "Pode me dizer os cursos disponíveis?",
                 "O que a FeMASS ensina?",
+                "Quais são as opções de cursos da FeMASS?",
                 "Quais são as opções de cursos da FeMASS?",
                 "Você pode listar os cursos da FeMASS?",
                 "Quais são os cursos oferecidos pela FeMASS?",
@@ -99,6 +122,8 @@ intents = {
                 "Quais são as graduações disponíveis na FeMASS?",
                 "Que graduações a FeMASS tem?",
                 "Quais cursos posso fazer na FeMASS?",
+                "Cursos",
+                "Curso"
             ],
             "responses": [
                 f"Os cursos disponíveis são {', '.join(available_courses)}",
@@ -123,7 +148,10 @@ intents = {
                 "Poderia me informar mais sobre o curso de Administração?",
                 "Quais são os detalhes do curso de Administração?",
                 "Quero saber sobre Administração",
-                "Quero saber sobre o curso de Administração"
+                "Quero saber sobre o curso de Administração",
+                "Gostaria de saber sobre Administração",
+                "Administração"
+                "Poderia falar mais sobre o curso de Administração?"
             ],
             "responses": [
                 "O curso de Administração tem como objetivo formar profissionais com formação generalista, humanista, crítica e reflexiva para proporcionar ao futuro administrador o alcance dos objetivos organizacionais. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min",
@@ -146,12 +174,45 @@ intents = {
                 "Quais são os conteúdos abordados no curso de Administração?",
                 "Quais matérias o curso de Administração oferece?",
                 "Quais conteúdos estão na grade curricular do curso de administração?",
-                "Matérias"
+                "Gostaria de saber das matérias de Administração",
+                "Quais matérias irei cursar em Administração?",
             ],
             "responses": [
-                f"O curso de Administração disponibiliza muitas matérias como Logística, Gestão de Custos e Sociologia. Para saber a ementa do curso entre no link {courses_links['administracao'][0]['summary']} ou caso queira ver o fluxograma da grade entre no link {courses_links['administracao'][0]['flowchart']}.",
-                f"No curso de Administração você vai aprender diversas matérias como Logística, Gestão de Custos e Sociologia. Para saber a ementa do curso entre no link {courses_links['administracao'][0]['summary']} ou caso queira ver o fluxograma da grade entre no link {courses_links['administracao'][0]['flowchart']}.",
-                f"Para saber mais sobre quais matérias o curso de Administração disponibiliza, entre no seguinte link para acessar a ementa:{courses_links['administracao'][0]['summary']} \nou caso queira ver o fluxograma da grade entre no link {courses_links['administracao'][0]['flowchart']}.",
+                f"O curso de Administração disponibiliza muitas matérias como Logística, Gestão de Custos e Sociologia. Para saber a ementa do curso entre no link {utils_links['administracao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['administracao']['flowchart']}.",
+                f"No curso de Administração você vai aprender diversas matérias como Logística, Gestão de Custos e Sociologia. Para saber a ementa do curso entre no link {utils_links['administracao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['administracao']['flowchart']}.",
+                f"Para saber mais sobre quais matérias o curso de Administração disponibiliza, entre no seguinte link para acessar a ementa:{utils_links['administracao']['summary']} \nou caso queira ver o fluxograma da grade entre no link {utils_links['administracao']['flowchart']}.",
+            ],
+        },
+        {
+            "intention": "engenharia-producao",
+            "patterns": [
+                "Gostaria de saber sobre o curso de Engenharia de Produção",
+                "Poderia me falar mais sobre o curso de Engenharia de Produção?",
+                "Gostaria de saber mais informações sobre o curso de Engenharia de Produção",
+                "Gostaria de informações sobre o curso de Engenharia de Produção",
+                "Poderia me informar mais sobre o curso de Engenharia de Produção?",
+                "Quais são os detalhes do curso de Engenharia de Produção?",
+                "Quero saber sobre Engenharia de Produção",
+                "Quero saber sobre o curso de Engenharia de Produção",
+                "Gostaria de saber sobre Engenharia de Produção",
+                "Gostaria de saber sobre o curso de Engenharia",
+                "Poderia me falar mais sobre o curso de Engenharia",
+                "Gostaria de saber mais informações sobre o curso de Engenharia",
+                "Gostaria de informações sobre o curso de Engenharia",
+                "Poderia me informar mais sobre o curso de Engenharia",
+                "Quais são os detalhes do curso de Engenharia",
+                "Quero saber sobre Engenharia",
+                "Quero saber sobre o curso de Engenharia",
+                "Gostaria de saber sobre Engenharia",
+                "Engenharia de Produção",
+                "Engenharia",
+                "Poderia falar mais sobre o curso de Engenharia de Produção?",
+                "Poderia falar mais sobre o curso de Engenharia?"
+            ],
+            "responses": [
+                "O curso de Engenharia de Produção tem como objetivo formar profissionais que desempenham um papel importante na corporação, pois atua nas atividades de projetar e viabilizar, de forma estratégica, processos produtivos, planejando, produzindo e distribuindo produtos que agregam valor à sociedade. O curso é oferecido de forma presencial, com duração de dez semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min",
+                "O curso de Engenharia de Produção visa formar profissionais com capacidade de projetar e viabilizart de forma estratégica , processos produtivos que agregam valor à sociedade. O curso é oferecido de forma presencial, com duração de dez semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+                "O objetivo do curso de Engenharia de Produção é preparar profissionais estratégicos e que agreguem valor à sociedade. O curso é oferecido na modalidade presencial, com duração de dez semestres letivos, sendo cada semestre composto por vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
             ],
         },
         {
@@ -169,11 +230,198 @@ intents = {
                 "Quais são os conteúdos abordados no curso de Engenharia de Produção?",
                 "Quais matérias o curso de Engenharia de Produção oferece?",
                 "Quais conteúdos estão na grade curricular do curso de Engenharia de Produção?",
+                "Qual a grade curricular de Engenharia?",
+                "Quais as matérias da grade curricular de Engenharia?",
+                "Quais matérias o curso de Engenharia disponibiliza?",
+                "Quais matérias estão na grade curricular de Engenharia?",
+                "O que vou aprender no curso de Engenharia?",
+                "Quais são as disciplinas do curso de Engenharia?",
+                "Quais são as disciplinas presentes na grade curricular de Engenharia?",
+                "Quais matérias fazem parte do curso de Engenharia?",
+                "Quais matérias fazem parte da grade curricular de Engenharia?",
+                "Quais são os conteúdos abordados no curso de Engenharia?",
+                "Quais matérias o curso de Engenharia oferece?",
+                "Quais conteúdos estão na grade curricular de Engenharia?",
+                "Gostaria de saber das matérias de Engenharia de Produção",
+                "Gostaria de saber das matérias de Engenharia",
+                "Quais matérias irei cursar em Engenharia de Produção?",
+                "Quais matérias irei cursar em Engenharia?",
+
             ],
             "responses": [
-                "ENGENHARIA!!!!"
+                f"O curso de Engenharia de Produção disponibiliza muitas matérias como Resistência dos Materiais, Física e Logística. Para saber a ementa do curso entre no link {utils_links['engenharia-producao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['engenharia-producao']['flowchart']}.",
+                f"No curso de Engenharia de Produção você vai aprender diversas matérias como Resistência dos Materiais, Física e Logística. Para saber a ementa do curso entre no link {utils_links['engenharia-producao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['engenharia-producao']['flowchart']}.",
+                f"Para saber mais sobre quais matérias o curso de Engenharia de Produção disponibiliza, entre no seguinte link para acessar a ementa:{utils_links['engenharia-producao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['engenharia-producao']['flowchart']}.",
             ],
         },
+        {
+            "intention": "sistemas-informacao",
+            "patterns": [
+                "Gostaria de saber sobre o curso de Sistemas de Informação",
+                "Poderia me falar mais sobre o curso de Sistemas de Informação?",
+                "Gostaria de saber mais informações sobre o curso de Sistemas de Informação",
+                "Gostaria de informações sobre o curso de Sistemas de Informação",
+                "Poderia me informar mais sobre o curso de Sistemas de Informação?",
+                "Quais são os detalhes do curso de Sistemas de Informação?",
+                "Quero saber sobre Sistemas de Informação",
+                "Quero saber sobre o curso de Sistemas de Informação",
+                "Gostaria de saber sobre Sistemas de Informação",
+                "Gostaria de saber sobre o curso de Sistemas",
+                "Poderia me falar mais sobre o curso de Sistemas ?",
+                "Gostaria de saber mais informações sobre o curso de Sistemas",
+                "Gostaria de informações sobre o curso de Sistemas",
+                "Poderia me informar mais sobre o curso de Sistemas",
+                "Quais são os detalhes do curso de Sistemas",
+                "Quero saber sobre Sistemas",
+                "Quero saber sobre o curso de Sistemas",
+                "Gostaria de saber sobre Sistemas",
+                "Sistemas de Informação",
+                "Sistemas",
+                "Poderia falar mais sobre o curso de Sistemas de Informação?",
+                "Poderia falar mais sobre o curso de Sistemas?"
+            ],
+            "responses": [
+                "O curso de Sistemas de Informação tem como objetivo formar profissionais aptos a analisar, desenvolver e implantar sistemas, infraestruturas de hardware, infraestrutura de dados e também realizar análise técnica de novas tecnologias. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min",
+                "O curso de Sistemas de Informação visa formar profissionais com uma visão analítica para desenvolver e implantar sistemas além de fazer análises técnicas de novas tecnologias. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+                "O objetivo do curso de Sistemas de Informação é preparar profissionais capacitados para desenvolver e implantar sistemas. O curso é oferecido na modalidade presencial, com duração de oito semestres letivos, sendo cada semestre composto por vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+            ],
+        },
+        {
+            "intention": "grade_curricular_sistemas_informacao",
+            "patterns": [
+                "Qual a grade curricular do curso de Sistemas de Informação?",
+                "Quais as matérias da grade curricular do curso de Sistemas de Informação?",
+                "Quais matérias o curso de Sistemas de Informação disponibiliza?",
+                "Quais matérias estão na grade curricular do curso de Sistemas de Informação",
+                "O que vou aprender no curso de Sistemas de Informação?",
+                "Quais são as disciplinas do curso de Sistemas de Informação?",
+                "Quais são as disciplinas presentes na grade curricular do curso de Sistemas de Informação",
+                "Quais matérias fazem parte do curso de Sistemas de Informação?",
+                "Quais matérias fazem parte da grade curricular do curso de Sistemas de Informação?",
+                "Quais são os conteúdos abordados no curso de Sistemas de Informação?",
+                "Quais matérias o curso de Sistemas de Informação oferece?",
+                "Quais conteúdos estão na grade curricular do curso de Sistemas de Informação?",
+                "Qual a grade curricular de Sistemas?",
+                "Quais as matérias da grade curricular de Sistemas?",
+                "Quais matérias o curso de Sistemas disponibiliza?",
+                "Quais matérias estão na grade curricular de Sistemas?",
+                "O que vou aprender no curso de Sistemas?",
+                "Quais são as disciplinas do curso de Sistemas?",
+                "Quais são as disciplinas presentes na grade curricular de Sistemas?",
+                "Quais matérias fazem parte do curso de Sistemas?",
+                "Quais matérias fazem parte da grade curricular de Sistemas?",
+                "Quais são os conteúdos abordados no curso de Sistemas?",
+                "Quais matérias o curso de Sistemas oferece?",
+                "Quais conteúdos estão na grade curricular de Sistemas?",
+                "Gostaria de saber das matérias de Sistemas de Informação"
+                "Gostaria de saber das matérias de Sistemas",
+                "Quais matérias irei cursar em Sistemas de Informação?",
+                "Quais matérias irei cursar em Sistemas?",
+            ],
+            "responses": [
+                f"O curso de Sistemas de Informação disponibiliza muitas matérias como Programação, Banco de Dados e Redes de Computadores. Para saber a ementa do curso entre no link {utils_links['sistemas-informacao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['sistemas-informacao']['flowchart']}.",
+                f"No curso de Sistemas de Informação você vai aprender diversas matérias como Programação, Banco de Dados e Redes de Computadores. Para saber a ementa do curso entre no link {utils_links['sistemas-informacao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['sistemas-informacao']['flowchart']}.",
+                f"Para saber mais sobre quais matérias o curso de Sistemas de Informação disponibiliza, entre no seguinte link para acessar a ementa: {utils_links['sistemas-informacao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['sistemas-informacao']['flowchart']}."
+            ]
+        },
+        {
+            "intention": "matematica",
+            "patterns": [
+                "Gostaria de saber sobre o curso de Matemática",
+                "Poderia me falar mais sobre o curso de Matemática?",
+                "Gostaria de saber mais informações sobre o curso de Matemática",
+                "Gostaria de informações sobre o curso de Matemática",
+                "Poderia me informar mais sobre o curso de Matemática?",
+                "Quais são os detalhes do curso de Matemática?",
+                "Quero saber sobre Matemática",
+                "Quero saber sobre o curso de Matemática",
+                "Gostaria de saber sobre Matemática",
+                "Matemática",
+                "Poderia falar mais sobre o curso de Matemática?"
+            ],
+            "responses": [
+                "O curso de Matemática tem como objetivo formar um profissional comprometido com a educação de qualidade, capaz de transmitir conhecimento de forma estratégica e alinhada à realidade social, política e cultural. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min",
+                "O curso de Matemática visa formar um profissional dedicado à educação de qualidade, que utilize estratégias didáticas conectadas ao contexto social, político e cultural. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+                "O objetivo do curso de Matemática é preparar profissionais capacitados e comprometidos com a edução de qualidade. O curso é oferecido na modalidade presencial, com duração de oito semestres letivos, sendo cada semestre composto por vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+            ],
+        },
+        {
+            "intention": "grade_curricular_matematica",
+            "patterns": [
+                "Qual a grade curricular do curso de Matemática?",
+                "Quais as matérias da grade curricular do curso de Matemática?",
+                "Quais matérias o curso de Matemática disponibiliza?",
+                "Quais matérias estão na grade curricular do curso de Matemática",
+                "O que vou aprender no curso de Matemática?",
+                "Quais são as disciplinas do curso de Matemática?",
+                "Quais são as disciplinas presentes na grade curricular do curso de Matemática",
+                "Quais matérias fazem parte do curso de Matemática?",
+                "Quais matérias fazem parte da grade curricular do curso de Matemática?",
+                "Quais são os conteúdos abordados no curso de Matemática?",
+                "Quais matérias o curso de Matemática oferece?",
+                "Quais conteúdos estão na grade curricular do curso de Matemática?",
+                "Gostaria de saber das matérias de Matemática",
+                "Quais matérias irei cursar em Matemática?",
+            ],
+            "responses": [
+                f"O curso de Matemática disponibiliza muitas matérias como Cálculo, Álgebra e Geometria. Para saber a ementa do curso entre no link {utils_links['matematica']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['matematica']['flowchart']}.",
+                f"No curso de Matemática você vai aprender diversas matérias como Cálculo, Álgebra e Geometria. Para saber a ementa do curso entre no link {utils_links['matematica']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['matematica']['flowchart']}.",
+                f"Para saber mais sobre quais matérias o curso de Matemática disponibiliza, entre no seguinte link para acessar a ementa: {utils_links['matematica']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['matematica']['flowchart']}.",
+            ]
+        },
+        {
+            "intention": "metodos_ingresso",
+            "patterns": [
+                "Quais são os métodos de ingresso na FEMASS?",
+                "Como posso ingressar na FEMASS?",
+                "Quais são as formas de entrar na FEMASS?",
+                "Como funciona o ingresso na FEMASS?",
+                "Quais são as opções para ingressar na FEMASS?",
+                "Quais são as maneiras de entrar na FEMASS?",
+                "Como faço para ingressar na FEMASS?",
+                "Quais são os processos de ingresso na FEMASS?",
+                "Quais são as modalidades de ingresso na FEMASS?",
+                "Como é o ingresso na FEMASS?",
+                "Quais são as vias de ingresso na FEMASS?",
+                "Quais são as alternativas para ingressar na FEMASS?",
+                "Como posso me matricular na FEMASS?",
+                "Quais são os caminhos para ingressar na FEMASS?",
+                "Quais são as possibilidades de ingresso na FEMASS?",
+                "Como é o processo de ingresso na FEMASS?",
+                "Quais são as formas de ingresso disponíveis na FEMASS?",
+                "Quais são as formas de acesso à FEMASS?",
+                "Como posso conseguir uma vaga na FEMASS?",
+                "Quais são as formas de admissão na FEMASS?",
+                "Como é o sistema de ingresso na FEMASS?",
+                "Quais são as formas de ingresso oferecidas pela FEMASS?",
+                "Quais são as opções de ingresso na FEMASS?",
+                "Como posso entrar na FEMASS?",
+                "Quais são as formas de ingresso na faculdade FEMASS?",
+                "Quais são as maneiras de se matricular na FEMASS?",
+                "Como funciona o acesso à FEMASS?",
+                "Quais são as formas de ingresso na instituição FEMASS?",
+                "Quais são as formas de ingresso na faculdade FEMASS?",
+                "Como posso me inscrever para ingressar na FEMASS?"
+            ],
+            "responses": [
+                "Você pode ingressar na FeMASS através do vestibular, transferência externa ou reingresso. Caso tenha dúvida em algum método específico é só me perguntar!",
+                "Existem três formas de ingressar na FeMASS: vestibular, transferência externa e reingresso.",
+                "Ótima pergunta! Para ingressar na FeMASS você pode fazer o vestibular, transferência externa e reingresso. Para mais informações sobre cada um deles recomendo entrar nos seguintes sites:\nVestibular: {utils_links['metodos_ingresso']['vestibular']}\nTransferência Externa: {utils_links['metodos_ingresso']['transferencia_externa']}\nReingresso: {utils_links['metodos_ingresso']['reingresso']}",
+                "Na FeMASS, você tem três opções para ingressar: vestibular, transferência externa e reingresso. Se precisar de detalhes sobre algum desses métodos, é só me perguntar!",
+                "Para se matricular na FeMASS, você pode optar por uma das três formas de ingresso: vestibular, transferência externa ou reingresso. Qualquer dúvida sobre esses métodos, estou aqui para ajudar!",
+                "Interessado em ingressar na FeMASS? Você pode escolher entre três métodos: vestibular, transferência externa ou reingresso. Se quiser mais detalhes sobre algum deles, é só avisar!"
+
+            ]
+        },
+        {
+            "intention": "vestibular",
+            "patterns": [
+
+            ],
+            "responses": [
+
+            ]
+        }
 
     ]
 }

@@ -15,4 +15,3 @@ def preprocess(sentence):
 
 
     return ' '.join(processed_words)
-

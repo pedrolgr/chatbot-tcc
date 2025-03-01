@@ -16,7 +16,7 @@ def extract_training_data(intents):
 
 def extract_all_words(training_data, stopwords):
     all_words = []
-    for (pattern, response) in training_data:
+    for (pattern, intention) in training_data:
         tokens = word_tokenize(pattern)
         [all_words.append(token) for token in tokens if token not in all_words and token not in stopwords]
 
