@@ -30,7 +30,10 @@ utils_links = {
             "vestibular": "https://www.macae.rj.gov.br/femass/conteudo/titulo/vestibular",
             "transferencia_externa": "https://www.macae.rj.gov.br/femass/conteudo/titulo/transferencia-externa",
             "reingresso": "https://www.macae.rj.gov.br/femass/conteudo/titulo/reingresso"
-        }
+        },
+    "outros": {
+            "corpo_docente": "https://www.macae.rj.gov.br/femass/conteudo/titulo/corpo-docente"
+    }
 }
 
 intents = {
@@ -281,9 +284,9 @@ intents = {
                 "Poderia falar mais sobre o curso de Sistemas?"
             ],
             "responses": [
-                "O curso de Sistemas de Informação tem como objetivo formar profissionais aptos a analisar, desenvolver e implantar sistemas, infraestruturas de hardware, infraestrutura de dados e também realizar análise técnica de novas tecnologias. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min",
+                "O curso de Sistemas de Informação tem como objetivo formar profissionais aptos a analisar, desenvolver e implantar sistemas, infraestruturas de hardware, infraestrutura de dados e também realizar análise técnica de novas tecnologias. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
                 "O curso de Sistemas de Informação visa formar profissionais com uma visão analítica para desenvolver e implantar sistemas além de fazer análises técnicas de novas tecnologias. O curso é oferecido de forma presencial, com duração de oito semestres letivos, cada um com vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
-                "O objetivo do curso de Sistemas de Informação é preparar profissionais capacitados para desenvolver e implantar sistemas. O curso é oferecido na modalidade presencial, com duração de oito semestres letivos, sendo cada semestre composto por vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min.",
+                "O objetivo do curso de Sistemas de Informação é preparar profissionais capacitados para desenvolver e implantar sistemas. O curso é oferecido na modalidade presencial, com duração de oito semestres letivos, sendo cada semestre composto por vinte semanas, em horário noturno de segunda a sexta, das 18h às 22h30min."
             ],
         },
         {
@@ -416,10 +419,110 @@ intents = {
         {
             "intention": "vestibular",
             "patterns": [
-
+                "Como faço o vestibular da FeMASS?",
+                "Gostaria de saber mais informações sobre o vestibular",
+                "Aonde faço minha matrícula para o vestibular da FeMASS?",
+                "Onde faço o vestibular da FeMASS?",
+                "Quais os requisitos para fazer o vestibular?",
+                "Como me inscrevo para o vestibular da FeMASS?",
+                "Quais são as etapas do vestibular da FeMASS?",
+                "O vestibular da FeMASS é online ou presencial?",
+                "Quando abrem as inscrições para o vestibular da FeMASS?",
+                "Qual é a documentação necessária para fazer o vestibular?",
+                "Como funciona o vestibular?",
+                "Vestibular",
             ],
             "responses": [
+                f"O Processo Seletivo para ingresso nos Cursos de Graduação da FeMASS segue critérios estabelecidos pelo Conselho Superior e detalhados em Edital Próprio. Podem participar candidatos que tenham concluído o ensino médio ou equivalente. Para mais informações, acesse {utils_links['metodos_ingresso']['vestibular']}.",
+                f"Para ingressar nos Cursos de Graduação da FeMASS, é necessário participar do Processo Seletivo, que avalia a aptidão intelectual dos candidatos conforme as normas definidas pelo Conselho Superior e publicadas em Edital Próprio. Saiba mais em {utils_links['metodos_ingresso']['vestibular']}.",
+                f"O vestibular da FeMASS é aberto a candidatos com escolaridade completa em nível médio ou equivalente. O processo de seleção segue critérios estabelecidos pelo Conselho Superior e visa classificar os candidatos conforme seu desempenho. Consulte os detalhes acessando {utils_links['metodos_ingresso']['vestibular']}.",
+                f"A seleção para os Cursos de Graduação da FeMASS ocorre por meio de Processo Seletivo, que busca avaliar as potencialidades dos candidatos de maneira equânime. As normas e critérios de ingresso são definidos em Edital Próprio. Para mais detalhes, visite {utils_links['metodos_ingresso']['vestibular']}."
+            ]
+        },
+        {
+            "intention": "vestibular_taxa",
+            "patterns": [
+                "Existe alguma taxa para fazer o vestibular?",
+                "Quanto é a taxa para fazer o vestibular?",
+                "Quando custa fazer o vestibular?",
+                "Qual valor do vestibular da FeMASS?",
+                "Quais os métodos de pagamento do vestibular da FeMASS?"
+                "O vestibular da FeMASS é gratuito?",
+                "Onde posso pagar a taxa do vestibular?",
+                "O valor do vestibular muda a cada ano?",
+                "A taxa do vestibular muda a cada ano?",
+                "A taxa do vestibular pode mudar a cada ano?"
+            ],
+            "responses": [
+                f"O valor da taxa de inscrição para o vestibular é no valor de R$70,00 e o pagamento pode ser efetuado através de um Boleto Bancário. Recomendo acessar o site {utils_links['metodos_ingresso']['vestibular']} e escolher o ano do vestibular que irá fazer para obter informações mais precisar!",
+                f"O valor da taxa de inscrição para o vestibular é de R$70,00 e o pagamento pode ser efetuado através de um Boleto Bancário. Para mais informações, acesse o site {utils_links['metodos_ingresso']['vestibular']} e escolha o ano do vestibular que deseja realizar!",
+                f"A inscrição para o vestibular tem uma taxa de R$70,00, e o pagamento deve ser feito via Boleto Bancário. Recomendo acessar {utils_links['metodos_ingresso']['vestibular']} para obter detalhes específicos sobre o vestibular do ano desejado!",
+                f"O vestibular possui uma taxa de inscrição no valor de R$70,00, que pode ser paga através de Boleto Bancário. Para informações mais detalhadas, visite {utils_links['metodos_ingresso']['vestibular']} e selecione o ano correspondente ao vestibular de interesse!",
 
+            ]
+        },
+        {
+            "intention": "transferencia_externa",
+            "patterns": [
+                "Como faço a transferência externa?",
+                "É possível fazer transferência externa?",
+                "Quais os métodos para realizar a transferência externa?",
+                "Quais são os requisitos para a transferência externa?",
+                "Como funciona o processo de transferência externa?",
+                "Quais documentos são necessários para solicitar a transferência externa?",
+                "Existe alguma taxa para a transferência externa?",
+                "Qual o prazo para solicitar a transferência externa?",
+                "A transferência externa é válida para todos os cursos?",
+                "Onde encontro o edital sobre a transferência externa?"
+            ],
+            "responses": [
+                f"O processo de Transferência Externa é realizado em três etapas: inscrição, prova de conhecimentos e entrega de documentação para análise de dispensa de disciplinas. Os documentos exigidos incluem declaração de matrícula, comprovantes do curso, cópia da identidade e uma foto 3x4. Para mais detalhes, acesse {utils_links['metodos_ingresso']['transferencia_externa']}.",
+                f"Para ingressar via Transferência Externa, o candidato deve seguir três etapas: inscrição, realização da prova de conhecimentos e envio da documentação exigida. Dentre os documentos necessários estão declaração de matrícula, identidade e comprovantes do curso. Todas as informações detalhadas estão disponíveis em {utils_links['metodos_ingresso']['transferencia_externa']}.",
+                f"A Transferência Externa exige que o candidato passe por três etapas: inscrição, prova de conhecimentos e entrega de documentos para análise. É necessário apresentar declaração de matrícula, identidade, comprovante do curso e outros documentos. Consulte todos os requisitos e prazos acessando {utils_links['metodos_ingresso']['transferencia_externa']}.",
+                f"Se você deseja solicitar a Transferência Externa, fique atento às três etapas do processo: inscrição, prova de conhecimentos e envio da documentação necessária. Os documentos incluem declaração de matrícula, identidade e comprovantes acadêmicos. Para informações detalhadas, acesse {utils_links['metodos_ingresso']['transferencia_externa']}."
+            ]
+        },
+        {
+            "intention": "reingresso",
+            "patterns": [
+                "Como posso solicitar o Reingresso?",
+                "Quais são os critérios para quem deseja fazer o Reingresso?",
+                "Quem está apto a participar do Reingresso?",
+                "É necessário atender a algum requisito para o Reingresso?",
+                "O que eu preciso para ser elegível ao Reingresso?",
+                "Quais são as condições exigidas para o Reingresso?",
+                "Quem pode se inscrever para o Reingresso?",
+                "Posso fazer o Reingresso mesmo tendo sido aluno de outra instituição?",
+                "Quais são as exigências para quem quer fazer o Reingresso na instituição?",
+                "Como saber se sou qualificado para o Reingresso?"
+            ],
+            "responses": [
+                f"O processo de Reingresso segue duas etapas: inscrição e prova de conhecimentos. A avaliação inclui uma prova discursiva de Matemática e uma Redação, sendo necessário obter nota mínima de 7,0 em cada uma. Para mais informações, acesse {utils_links['metodos_ingresso']['reingresso']}."  
+                f"Para solicitar o Reingresso, o candidato deve se inscrever e realizar uma prova de conhecimentos. Apenas graduados em cursos superiores reconhecidos podem participar, e a aprovação exige nota mínima de 7,0 em cada avaliação. Confira os detalhes no edital disponível em {utils_links['metodos_ingresso']['reingresso']}."  
+                f"O Reingresso é um processo seletivo com duas etapas: inscrição e prova de conhecimentos. Apenas candidatos graduados podem participar, e a prova exige um desempenho mínimo de 7,0 em cada avaliação para classificação. Saiba mais acessando {utils_links['metodos_ingresso']['reingresso']}."  
+                f"Se você deseja participar do processo de Reingresso, é necessário se inscrever e fazer uma prova de conhecimentos, que inclui questões discursivas de Matemática e uma Redação. A classificação depende de uma nota mínima de 7,0 em cada avaliação. Veja mais detalhes no site: {utils_links['metodos_ingresso']['reingresso']}."
+
+            ]
+        },
+        {
+            "intention": "corpo_docente",
+            "patterns": [
+                "Quem faz parte do corpo docente da instituição?",
+                "Como posso consultar a lista de professores da faculdade?",
+                "Quais são os professores responsáveis pelo curso?",
+                "Como encontrar informações sobre os professores do corpo docente?",
+                "Qual é o nome dos professores do curso de graduação?",
+                "Os professores da instituição têm algum departamento específico?",
+                "Como posso saber quem são os professores do meu curso?",
+                "O corpo docente da faculdade é formado por quais professores?",
+                "Quais são os professores da FeMASS?",
+                "Posso obter informações sobre os professores?"
+            ],
+            "responses": [
+                f"O corpo docente da instituição é composto por professores altamente capacitados em suas respectivas áreas. Para consultar a lista completa de professores, acesse {utils_links['outros']['corpo_docente']}.",
+                f"Você pode encontrar informações detalhadas sobre o corpo docente através do seguinte link: {utils_links['outros']['corpo_docente']}.",
+                f"Para saber mais sobre os professores e suas áreas de atuação, consulte o corpo docente no link: {utils_links['outros']['corpo_docente']}.",
+                f"Para acessar informações sobre o corpo docente e os professores da instituição, acesse o site {utils_links['outros']['corpo_docente']}."
             ]
         }
 
