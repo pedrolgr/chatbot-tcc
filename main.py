@@ -5,7 +5,7 @@ from data.intent_config import intents
 with open('./data/stopwords.txt', 'r', encoding='utf-8') as file:
     stopwords = set(line.strip() for line in file)
 
-training_data, response_data, all_words, feature_set, accuracy, classifier = initialize_chatbot(intents, stopwords)
+response_data, all_words, accuracy, classifier = initialize_chatbot(intents, stopwords)
 
 print(accuracy)
 

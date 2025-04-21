@@ -179,6 +179,8 @@ intents = {
                 "Quais conteúdos estão na grade curricular do curso de administração?",
                 "Gostaria de saber das matérias de Administração",
                 "Quais matérias irei cursar em Administração?",
+                "Grade Curricular Administração",
+                "Materias Administração"
             ],
             "responses": [
                 f"O curso de Administração disponibiliza muitas matérias como Logística, Gestão de Custos e Sociologia. Para saber a ementa do curso entre no link {utils_links['administracao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['administracao']['flowchart']}.",
@@ -249,6 +251,8 @@ intents = {
                 "Gostaria de saber das matérias de Engenharia",
                 "Quais matérias irei cursar em Engenharia de Produção?",
                 "Quais matérias irei cursar em Engenharia?",
+                "Grade Curricular Engenharia de Produção",
+                "Materias Engenharia de Produção"
 
             ],
             "responses": [
@@ -320,6 +324,8 @@ intents = {
                 "Gostaria de saber das matérias de Sistemas",
                 "Quais matérias irei cursar em Sistemas de Informação?",
                 "Quais matérias irei cursar em Sistemas?",
+                "Grade Curricular Sistemas de Informação",
+                "Matéria Sistemas de Informação"
             ],
             "responses": [
                 f"O curso de Sistemas de Informação disponibiliza muitas matérias como Programação, Banco de Dados e Redes de Computadores. Para saber a ementa do curso entre no link {utils_links['sistemas-informacao']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['sistemas-informacao']['flowchart']}.",
@@ -365,6 +371,8 @@ intents = {
                 "Quais conteúdos estão na grade curricular do curso de Matemática?",
                 "Gostaria de saber das matérias de Matemática",
                 "Quais matérias irei cursar em Matemática?",
+                "Grade Curricuclar Matematica",
+                "Materias Matematica"
             ],
             "responses": [
                 f"O curso de Matemática disponibiliza muitas matérias como Cálculo, Álgebra e Geometria. Para saber a ementa do curso entre no link {utils_links['matematica']['summary']} ou caso queira ver o fluxograma da grade entre no link {utils_links['matematica']['flowchart']}.",
@@ -409,7 +417,7 @@ intents = {
             "responses": [
                 "Você pode ingressar na FeMASS através do vestibular, transferência externa ou reingresso. Caso tenha dúvida em algum método específico é só me perguntar!",
                 "Existem três formas de ingressar na FeMASS: vestibular, transferência externa e reingresso.",
-                "Ótima pergunta! Para ingressar na FeMASS você pode fazer o vestibular, transferência externa e reingresso. Para mais informações sobre cada um deles recomendo entrar nos seguintes sites:\nVestibular: {utils_links['metodos_ingresso']['vestibular']}\nTransferência Externa: {utils_links['metodos_ingresso']['transferencia_externa']}\nReingresso: {utils_links['metodos_ingresso']['reingresso']}",
+                f"Ótima pergunta! Para ingressar na FeMASS você pode fazer o vestibular, transferência externa e reingresso. Para mais informações sobre cada um deles recomendo entrar nos seguintes sites:\nVestibular: {utils_links['metodos_ingresso']['vestibular']}\nTransferência Externa: {utils_links['metodos_ingresso']['transferencia_externa']}\nReingresso: {utils_links['metodos_ingresso']['reingresso']}",
                 "Na FeMASS, você tem três opções para ingressar: vestibular, transferência externa e reingresso. Se precisar de detalhes sobre algum desses métodos, é só me perguntar!",
                 "Para se matricular na FeMASS, você pode optar por uma das três formas de ingresso: vestibular, transferência externa ou reingresso. Qualquer dúvida sobre esses métodos, estou aqui para ajudar!",
                 "Interessado em ingressar na FeMASS? Você pode escolher entre três métodos: vestibular, transferência externa ou reingresso. Se quiser mais detalhes sobre algum deles, é só avisar!"
@@ -451,7 +459,9 @@ intents = {
                 "Onde posso pagar a taxa do vestibular?",
                 "O valor do vestibular muda a cada ano?",
                 "A taxa do vestibular muda a cada ano?",
-                "A taxa do vestibular pode mudar a cada ano?"
+                "A taxa do vestibular pode mudar a cada ano?",
+                "Valor Vestibular",
+                "Taxa Vestibular"
             ],
             "responses": [
                 f"O valor da taxa de inscrição para o vestibular é no valor de R$70,00 e o pagamento pode ser efetuado através de um Boleto Bancário. Recomendo acessar o site {utils_links['metodos_ingresso']['vestibular']} e escolher o ano do vestibular que irá fazer para obter informações mais precisar!",
@@ -473,7 +483,8 @@ intents = {
                 "Existe alguma taxa para a transferência externa?",
                 "Qual o prazo para solicitar a transferência externa?",
                 "A transferência externa é válida para todos os cursos?",
-                "Onde encontro o edital sobre a transferência externa?"
+                "Onde encontro o edital sobre a transferência externa?",
+                "transferencia externa"
             ],
             "responses": [
                 f"O processo de Transferência Externa é realizado em três etapas: inscrição, prova de conhecimentos e entrega de documentação para análise de dispensa de disciplinas. Os documentos exigidos incluem declaração de matrícula, comprovantes do curso, cópia da identidade e uma foto 3x4. Para mais detalhes, acesse {utils_links['metodos_ingresso']['transferencia_externa']}.",
@@ -494,7 +505,8 @@ intents = {
                 "Quem pode se inscrever para o Reingresso?",
                 "Posso fazer o Reingresso mesmo tendo sido aluno de outra instituição?",
                 "Quais são as exigências para quem quer fazer o Reingresso na instituição?",
-                "Como saber se sou qualificado para o Reingresso?"
+                "Como saber se sou qualificado para o Reingresso?",
+                "reingresso"
             ],
             "responses": [
                 f"O processo de Reingresso segue duas etapas: inscrição e prova de conhecimentos. A avaliação inclui uma prova discursiva de Matemática e uma Redação, sendo necessário obter nota mínima de 7,0 em cada uma. Para mais informações, acesse {utils_links['metodos_ingresso']['reingresso']}."  
@@ -516,13 +528,26 @@ intents = {
                 "Como posso saber quem são os professores do meu curso?",
                 "O corpo docente da faculdade é formado por quais professores?",
                 "Quais são os professores da FeMASS?",
-                "Posso obter informações sobre os professores?"
+                "Posso obter informações sobre os professores?",
+                "Corpo Docente",
+                "Professores Femass",
+                "Professores"
             ],
             "responses": [
                 f"O corpo docente da instituição é composto por professores altamente capacitados em suas respectivas áreas. Para consultar a lista completa de professores, acesse {utils_links['outros']['corpo_docente']}.",
                 f"Você pode encontrar informações detalhadas sobre o corpo docente através do seguinte link: {utils_links['outros']['corpo_docente']}.",
                 f"Para saber mais sobre os professores e suas áreas de atuação, consulte o corpo docente no link: {utils_links['outros']['corpo_docente']}.",
                 f"Para acessar informações sobre o corpo docente e os professores da instituição, acesse o site {utils_links['outros']['corpo_docente']}."
+            ]
+        },
+        {
+            "intention": "",
+            "patterns": [
+
+            ],
+            "responses": [
+                f""
+
             ]
         }
 

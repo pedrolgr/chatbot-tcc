@@ -1,4 +1,3 @@
-from nltk import word_tokenize
 from src.preprocess import preprocess
 from src.train import extract_training_data, extract_all_words, extract_feature_set, train, extract_features
 import random
@@ -16,5 +15,4 @@ def initialize_chatbot(intents, stopwords):
     feature_set = extract_feature_set(training_data, all_words)
     accuracy, classifier = train(feature_set)
 
-    return training_data, response_data, all_words, feature_set, accuracy, classifier
-
+    return response_data, all_words, accuracy, classifier

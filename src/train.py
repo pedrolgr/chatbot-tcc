@@ -11,6 +11,7 @@ def extract_training_data(intents):
             training_data.append((preprocess(pattern), intent['intention']))
         response_data[intent['intention']] = intent['responses']
     random.shuffle(training_data)
+    print(training_data)
 
     return training_data, response_data
 

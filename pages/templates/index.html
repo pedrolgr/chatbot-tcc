@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot - FeMASS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>ChatBot FeMASS</h1>
+        </div>
+        <div id="chat" class="chat-box">
+
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="Em que posso ajudar?">
+            <button onclick="handleMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        function handleMessage() {
+            const message = document.getElementById("message").value;
+            if (message.trim() !== '') {
+                fetch(`/response?message=${message}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const chat = document.getElementById("chat");
+                        chat.innerHTML += `<div class="user-message"><p>${message}</p></div>`;
+                        chat.innerHTML += `<div class="bot-message"><p>${data.response}</p></div>`;
+                        document.getElementById("message").value = "";
+                        chat.scrollTop = chat.scrollHeight;
+                    });
+            }
+        }
+
+        document.getElementById("message").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                handleMessage();
+            }
+        });
+
+
+    </script>
+</body>
+</html>
